@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
+import smbus2 as smbus
 from flask import Flask, request, jsonify
-import smbus
 from time import sleep
 from queue import Queue
 from threading import Thread
