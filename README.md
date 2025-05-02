@@ -25,3 +25,5 @@ Build & run
 podman build -t blescan .
 podman run -d --restart=always --name blescan --net=host --privileged --device /dev/hci0 -v /var/run/dbus/system_bus_socket:/run/dbus/system_bus_socket -e ES_HOST=http://eshost:9200 -e ES_USER=elastic -e ES_PASSWORD=hogehoge blescan:latest
 ```
+
+scanner.py にハードコーディングされているMACアドレスを所有しているデバイスのものに変更してください。
