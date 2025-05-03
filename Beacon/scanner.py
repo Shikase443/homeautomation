@@ -9,12 +9,12 @@ from bleak import BleakScanner
 
 # --- Config ------------------------------------------------------------------
 
-RATE_LIMIT_SECONDS = 30.0
-
 # Elasticsearch host (no index path)
 ES_HOST     = os.getenv("ES_HOST")
 ES_USER     = os.getenv("ES_USER")
 ES_PASSWORD = os.getenv("ES_PASSWORD")
+
+RATE_LIMIT_SECONDS = float(os.getenv("RATESEC"))
 
 if not ES_HOST:
     print("ES_HOST is not set", file=sys.stderr)
